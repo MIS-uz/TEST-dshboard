@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Lessons · CORE Academy</title>
+<link rel="icon" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/theme.css"/>
+<style>
+  .lesson-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+  .lesson-card:hover{transform:translateY(-4px);border-color:var(--border-2)}
+  .lc-cover{height:140px;display:grid;place-items:center;font-size:46px;color:#fff;position:relative}
+  .lc-cover .tag{position:absolute;top:10px;left:10px}
+  .lc-cover .duration{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.55);padding:3px 8px;border-radius:6px;font-size:11px;color:#fff;backdrop-filter:blur(6px)}
+  .lc-body{padding:16px;flex:1;display:flex;flex-direction:column;gap:8px}
+  .lc-title{font-weight:700;font-size:15px;margin:0}
+  .lc-teacher{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12.5px}
+  .lc-meta{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:4px}
+  .lc-foot{padding:0 16px 16px;display:flex;gap:8px}
+  .filters{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+  .filters button{padding:8px 14px;border-radius:20px;border:1px solid var(--border);background:var(--panel);color:var(--muted);font-size:13px;cursor:pointer}
+  .filters button.active{background:var(--grad-brand);color:#fff;border:0}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="page-title">
+    <div>
+      <h1 data-i18n="lessons">Lessons</h1>
+      <p>Browse live classes, 1-on-1 sessions, and on-demand courses.</p>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-ghost btn-sm">📅 Calendar</button>
+      <button class="btn btn-primary btn-sm">+ Create Lesson</button>
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="active">All Lessons</button>
+    <button>🔴 Live Now</button>
+    <button>📅 Upcoming</button>
+    <button>👤 1-on-1 <span class="pill gold" style="margin-left:6px;padding:0 6px;font-size:10px">PAID</span></button>
+    <button>🎓 Group Classes</button>
+    <button>📺 Recordings</button>
+    <button>⭐ Free Trial</button>
+  </div>
+
+  <div class="grid grid-3">
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#1A8CFF,#611CFF)">🎥<span class="pill green tag">🔴 LIVE NOW</span><span class="duration">90 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">English Conversation B2</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px">ER</div>Emily Rodriguez · Group · 24 students</div>
+        <div class="lc-meta"><span>★ 4.9 (412 reviews)</span><span style="color:var(--gold);font-weight:700">Free trial</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-primary" style="flex:1;justify-content:center" data-i18n="joinLive">Join Live</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#F2C063,#E6A83E);color:#1a120a">한<span class="pill gold tag">PREMIUM 1-on-1</span><span class="duration">60 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">Korean for Beginners — Private</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px;background:var(--grad-gold);color:#1a120a">JL</div>Jin-woo Lee · 1-on-1 · 4.95 ★</div>
+        <div class="lc-meta"><span>Today 16:00</span><span style="color:#7CE57C;font-weight:700">$45/session</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-gold" style="flex:1;justify-content:center">Book Now</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#7CE5B1,#1A8CFF)">RU<span class="pill blue tag">UPCOMING</span><span class="duration">75 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">Русский язык — Beginner Group</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px">NV</div>Natalia V. · Group · 18 students</div>
+        <div class="lc-meta"><span>Tomorrow · 10:00</span><span class="pill">PRO</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-primary" style="flex:1;justify-content:center">Enroll</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#a795ff,#611CFF)">UZ<span class="pill green tag">FREE TRIAL</span><span class="duration">45 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">O'zbek tili — Suhbat klubi</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px">DV</div>Dilshod V. · Group · 12 students</div>
+        <div class="lc-meta"><span>Tomorrow · 18:00</span><span style="color:var(--gold);font-weight:700">Free</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-ghost" style="flex:1;justify-content:center">Reserve seat</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#FF6A88,#FF99AC)">ES<span class="pill tag">ON-DEMAND</span><span class="duration">28 lessons</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">Spanish A1 — Full Course</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px">CS</div>Carlos S. · Self-paced · 1,240 enrolled</div>
+        <div class="lc-meta"><span>★ 4.8 · 18 hrs</span><span class="pill">PRO</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-primary" style="flex:1;justify-content:center" data-i18n="startLesson">Start Lesson</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#0F4C81,#1A8CFF)">📊<span class="pill tag">RECORDING</span><span class="duration">52 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">IELTS Speaking — Mock Test Review</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px">ER</div>Emily R. · Recorded · 3 days ago</div>
+        <div class="lc-meta"><span>👁 482 views</span><span class="pill">PRO</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-ghost" style="flex:1;justify-content:center">▶ Watch</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#FF8A50,#FFC371)">JP<span class="pill green tag">FREE TRIAL</span><span class="duration">50 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">日本語 Beginner — Hiragana</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px">YK</div>Yuki K. · Group · 8 students</div>
+        <div class="lc-meta"><span>Friday · 19:00</span><span style="color:var(--gold);font-weight:700">Free</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-ghost" style="flex:1;justify-content:center">Reserve seat</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#4ECDC4,#1A8CFF)">CN<span class="pill gold tag">PREMIUM 1-on-1</span><span class="duration">60 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">中文 — Business Mandarin Private</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px;background:var(--grad-gold);color:#1a120a">LW</div>Li Wei · 1-on-1 · 4.97 ★</div>
+        <div class="lc-meta"><span>Flexible time</span><span style="color:#7CE57C;font-weight:700">$60/session</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-gold" style="flex:1;justify-content:center">Book Now</a></div>
+    </div>
+
+    <div class="lesson-card">
+      <div class="lc-cover" style="background:linear-gradient(135deg,#E91E63,#9C27B0)">DE<span class="pill blue tag">UPCOMING</span><span class="duration">60 min</span></div>
+      <div class="lc-body">
+        <h4 class="lc-title">Deutsch A2 — Grammatik Workshop</h4>
+        <div class="lc-teacher"><div class="avatar" style="width:24px;height:24px;font-size:10px">HM</div>Hans Müller · Group · 16 students</div>
+        <div class="lc-meta"><span>Saturday · 11:00</span><span class="pill">PRO</span></div>
+      </div>
+      <div class="lc-foot"><a class="btn btn-primary" style="flex:1;justify-content:center">Enroll</a></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>mountShell('lessons');</script>
+</body>
+</html>

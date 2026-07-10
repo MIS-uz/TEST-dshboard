@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Dashboard · CORE Academy</title>
+<link rel="icon" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/theme.css"/>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="page-title">
+    <div>
+      <h1><span data-i18n="welcome">Welcome back</span>, Sarah 👋</h1>
+      <p data-i18n="greet">Here's what's happening at your academy today.</p>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-ghost btn-sm">📅 Today</button>
+      <button class="btn btn-primary btn-sm">+ New Lesson</button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="grid grid-4">
+    <div class="stat">
+      <div class="ico">👨‍🎓</div>
+      <div class="lbl" data-i18n="totalStudents">Total Students</div>
+      <div class="val">1,284</div>
+      <div class="delta">▲ 12.5% vs last month</div>
+    </div>
+    <div class="stat">
+      <div class="ico" style="background:rgba(230,168,62,.15);color:#f3c777">📚</div>
+      <div class="lbl" data-i18n="activeLessons">Active Lessons</div>
+      <div class="val">48</div>
+      <div class="delta">▲ 8 new this week</div>
+    </div>
+    <div class="stat">
+      <div class="ico" style="background:rgba(46,196,138,.15);color:#7ce5b1">💰</div>
+      <div class="lbl" data-i18n="monthlyRevenue">Monthly Revenue</div>
+      <div class="val">$24,580</div>
+      <div class="delta">▲ 18.2%</div>
+    </div>
+    <div class="stat">
+      <div class="ico" style="background:rgba(26,140,255,.15);color:#9bc8ff">📈</div>
+      <div class="lbl" data-i18n="completionRate">Completion Rate</div>
+      <div class="val">87%</div>
+      <div class="delta down">▼ 2.1%</div>
+    </div>
+  </div>
+
+  <!-- Mid grid -->
+  <div class="grid grid-2-1" style="margin-top:18px">
+    <!-- Upcoming lessons -->
+    <div class="card card-pad">
+      <div class="card-title">
+        <h3 data-i18n="upcomingLessons">Upcoming Lessons</h3>
+        <a href="lessons.html" data-i18n="viewAll">View all</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="lesson">
+          <div class="thumb" style="background:linear-gradient(135deg,#1A8CFF,#611CFF)">EN</div>
+          <div class="info">
+            <h4>English Conversation B2 — Group Class</h4>
+            <p>Today · 14:00–15:30 · <span style="color:#7CE57C">24 students enrolled</span></p>
+          </div>
+          <span class="pill green">LIVE soon</span>
+          <button class="btn btn-primary btn-sm" data-i18n="joinLive">Join Live</button>
+        </div>
+        <div class="lesson">
+          <div class="thumb" style="background:linear-gradient(135deg,#F2C063,#E6A83E);color:#1a120a">한</div>
+          <div class="info">
+            <h4>Korean A1 — 1-on-1 with Maria</h4>
+            <p>Today · 16:00–17:00 · <span class="pill gold" style="padding:0 8px;font-size:10px">PREMIUM</span></p>
+          </div>
+          <button class="btn btn-gold btn-sm">Start</button>
+        </div>
+        <div class="lesson">
+          <div class="thumb" style="background:linear-gradient(135deg,#7CE5B1,#1A8CFF)">RU</div>
+          <div class="info">
+            <h4>Русский язык — Beginner</h4>
+            <p>Tomorrow · 10:00 · 18 students</p>
+          </div>
+          <button class="btn btn-ghost btn-sm">Details</button>
+        </div>
+        <div class="lesson">
+          <div class="thumb" style="background:linear-gradient(135deg,#a795ff,#611CFF)">UZ</div>
+          <div class="info">
+            <h4>O'zbek tili — Suhbat klubi</h4>
+            <p>Tomorrow · 18:00 · Free trial available</p>
+          </div>
+          <button class="btn btn-ghost btn-sm">Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Today schedule -->
+    <div class="card card-pad">
+      <div class="card-title">
+        <h3 data-i18n="todaySchedule">Today's Schedule</h3>
+        <a href="schedule.html" data-i18n="viewAll">View all</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="evt"><div class="time"><span class="h">09</span>:00</div><div class="bar"></div><div class="det"><h5>Daily standup</h5><p>15 min · Teachers room</p></div></div>
+        <div class="evt"><div class="time"><span class="h">14</span>:00</div><div class="bar"></div><div class="det"><h5>English B2 group</h5><p>90 min · 24 students</p></div></div>
+        <div class="evt"><div class="time"><span class="h">16</span>:00</div><div class="bar"></div><div class="det"><h5>Korean 1-on-1</h5><p>60 min · Maria L.</p></div></div>
+        <div class="evt"><div class="time"><span class="h">18</span>:30</div><div class="bar"></div><div class="det"><h5>Q&A Channel live</h5><p>30 min · #general</p></div></div>
+        <div class="evt"><div class="time"><span class="h">20</span>:00</div><div class="bar"></div><div class="det"><h5>Russian beginner</h5><p>60 min · 18 students</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom grid -->
+  <div class="grid grid-2" style="margin-top:18px">
+    <!-- Recent activity -->
+    <div class="card card-pad">
+      <div class="card-title"><h3 data-i18n="recentActivity">Recent Activity</h3></div>
+      <table>
+        <thead><tr><th>Student</th><th>Action</th><th>Course</th><th>Time</th></tr></thead>
+        <tbody>
+          <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:30px;height:30px;font-size:12px">JD</div>James Doe</div></td><td><span class="pill green">Completed</span></td><td>Korean A1</td><td style="color:var(--muted)">2 min ago</td></tr>
+          <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:30px;height:30px;font-size:12px;background:var(--grad-gold);color:#1a120a">ML</div>Maria L.</div></td><td><span class="pill blue">Joined live</span></td><td>English B2</td><td style="color:var(--muted)">8 min ago</td></tr>
+          <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:30px;height:30px;font-size:12px">AK</div>Aziz K.</div></td><td><span class="pill gold">Upgraded</span></td><td>Pro plan</td><td style="color:var(--muted)">22 min ago</td></tr>
+          <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:30px;height:30px;font-size:12px">SP</div>Soo Park</div></td><td><span class="pill">Booked</span></td><td>1-on-1 session</td><td style="color:var(--muted)">1 hr ago</td></tr>
+          <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:30px;height:30px;font-size:12px">DV</div>Dilshod V.</div></td><td><span class="pill red">Missed</span></td><td>O'zbek class</td><td style="color:var(--muted)">2 hr ago</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Top students -->
+    <div class="card card-pad">
+      <div class="card-title"><h3 data-i18n="topStudents">Top Students this month</h3></div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="avatar" style="background:var(--grad-gold);color:#1a120a">🥇</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Soo-jin Park</div><div style="color:var(--muted);font-size:12px">Korean A2 · 2,840 XP</div><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:95%"></div></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="avatar" style="background:#A0A8C0;color:#1a120a">🥈</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Aziz Karimov</div><div style="color:var(--muted);font-size:12px">English B2 · 2,510 XP</div><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:84%"></div></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="avatar" style="background:#CD7F32;color:#fff">🥉</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Maria Lopez</div><div style="color:var(--muted);font-size:12px">Russian B1 · 2,180 XP</div><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:73%"></div></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="avatar" style="width:40px">DV</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Dilshod Vakhidov</div><div style="color:var(--muted);font-size:12px">English A1 · 1,920 XP</div><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:64%"></div></div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="avatar" style="width:40px">JL</div>
+          <div style="flex:1"><div style="font-weight:600;font-size:14px">Jin-woo Lee</div><div style="color:var(--muted);font-size:12px">Uzbek beginner · 1,710 XP</div><div class="bar-track" style="margin-top:6px"><div class="bar-fill" style="width:57%"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>mountShell('dashboard');</script>
+</body>
+</html>

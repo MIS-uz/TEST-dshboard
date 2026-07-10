@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Sign In · CORE Academy</title>
+<link rel="icon" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/theme.css"/>
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="auth-hero">
+    <div>
+      <a href="../index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff">
+        <img src="../assets/logo.png" style="width:46px;height:46px;border-radius:12px"/>
+        <div><div style="font-weight:800;font-size:18px">CORE <span style="color:var(--gold)">Academy</span></div>
+        <div style="font-size:11px;color:#b9c4dd;letter-spacing:2px">PREMIUM EDTECH</div></div>
+      </a>
+      <h1 style="margin-top:80px">Welcome to the<br/>future of learning</h1>
+      <p>Join 12,000+ students mastering new skills with live classes, expert mentors, and a vibrant community.</p>
+      <div class="feats">
+        <div><span class="b">🎥</span> Live HD classes with interactive whiteboard</div>
+        <div><span class="b">💬</span> Telegram-style chat with channels & stickers</div>
+        <div><span class="b">🏆</span> Track progress with gamified XP & badges</div>
+        <div><span class="b">📱</span> Available on iOS, Android & Desktop</div>
+      </div>
+    </div>
+    <div style="color:#7e8bab;font-size:12px">© 2026 CORE Academy</div>
+  </div>
+
+  <div class="auth-form">
+    <div class="box">
+      <div class="tabs">
+        <button id="tab-in" class="active" onclick="switchTab('in')" data-i18n="signIn">Sign In</button>
+        <button id="tab-up" onclick="switchTab('up')" data-i18n="signUp">Sign Up</button>
+      </div>
+
+      <div id="form-in">
+        <h2 data-i18n="signIn">Sign In</h2>
+        <div class="sub">Continue your learning journey.</div>
+        <div class="field"><label data-i18n="email">Email</label><input type="email" placeholder="you@example.com" value="student@core.academy"/></div>
+        <div class="field"><label data-i18n="password">Password</label><input type="password" placeholder="••••••••" value="demo1234"/></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+          <label style="display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)"><input type="checkbox" checked/> Remember me</label>
+          <a href="#" style="font-size:13px;color:var(--blue)" data-i18n="forgotPwd">Forgot password?</a>
+        </div>
+        <a href="dashboard.html" class="btn btn-primary" style="width:100%;justify-content:center;padding:13px" data-i18n="signIn">Sign In</a>
+        <div style="display:flex;align-items:center;gap:10px;margin:18px 0;color:var(--muted-2);font-size:12px"><div style="flex:1;height:1px;background:var(--border)"></div>OR<div style="flex:1;height:1px;background:var(--border)"></div></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <button class="btn btn-ghost" style="justify-content:center">🔵 Google</button>
+          <button class="btn btn-ghost" style="justify-content:center">🍎 Apple</button>
+        </div>
+        <p style="text-align:center;color:var(--muted);font-size:13.5px;margin-top:18px">
+          <span data-i18n="noAccount">Don't have an account?</span>
+          <a href="#" onclick="switchTab('up');return false" style="color:var(--blue);font-weight:600"> Sign up free</a>
+        </p>
+      </div>
+
+      <div id="form-up" style="display:none">
+        <h2 data-i18n="createAccount">Create Account</h2>
+        <div class="sub">Start with 3 free lessons. No credit card.</div>
+        <div class="field"><label data-i18n="fullName">Full Name</label><input type="text" placeholder="John Doe"/></div>
+        <div class="field"><label data-i18n="email">Email</label><input type="email" placeholder="you@example.com"/></div>
+        <div class="field"><label data-i18n="password">Password</label><input type="password" placeholder="Min 8 characters"/></div>
+        <div class="field"><label data-i18n="role">I am a...</label>
+          <select>
+            <option data-i18n="student">Student</option>
+            <option data-i18n="teacher">Teacher</option>
+          </select>
+        </div>
+        <label style="display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--muted);margin-bottom:14px">
+          <input type="checkbox" checked style="margin-top:2px"/> I agree to the Terms of Service & Privacy Policy
+        </label>
+        <a href="dashboard.html" class="btn btn-primary" style="width:100%;justify-content:center;padding:13px" data-i18n="createAccount">Create Account</a>
+        <p style="text-align:center;color:var(--muted);font-size:13.5px;margin-top:18px">
+          <span data-i18n="haveAccount">Already have an account?</span>
+          <a href="#" onclick="switchTab('in');return false" style="color:var(--blue);font-weight:600"> Sign in</a>
+        </p>
+      </div>
+
+      <div style="margin-top:24px;display:flex;justify-content:center;gap:6px">
+        <div class="lang-pick">
+          <button data-lang="en" onclick="setLang('en')">EN</button>
+          <button data-lang="ru" onclick="setLang('ru')">RU</button>
+          <button data-lang="uz" onclick="setLang('uz')">UZ</button>
+          <button data-lang="ko" onclick="setLang('ko')">KO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>
+  function switchTab(t){
+    document.getElementById('form-in').style.display=t==='in'?'block':'none';
+    document.getElementById('form-up').style.display=t==='up'?'block':'none';
+    document.getElementById('tab-in').classList.toggle('active',t==='in');
+    document.getElementById('tab-up').classList.toggle('active',t==='up');
+  }
+  if(new URLSearchParams(location.search).get('tab')==='signup') switchTab('up');
+  document.body.insertAdjacentHTML('beforeend', renderFAB());
+  applyI18n();
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Subscription · CORE Academy</title>
+<link rel="icon" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/theme.css"/>
+<style>
+  .billing{display:flex;gap:6px;padding:4px;background:var(--panel);border:1px solid var(--border);border-radius:10px;width:fit-content;margin:0 auto 30px}
+  .billing button{padding:8px 18px;background:transparent;border:0;color:var(--muted);font-weight:600;border-radius:8px;font-size:13px;cursor:pointer}
+  .billing button.active{background:var(--grad-brand);color:#fff}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="page-title">
+    <div>
+      <h1 data-i18n="subscription">Subscription</h1>
+      <p>Choose the plan that fits your learning journey.</p>
+    </div>
+  </div>
+
+  <!-- Current plan -->
+  <div class="card card-pad" style="margin-bottom:24px;background:linear-gradient(135deg,rgba(122,108,255,.1),rgba(26,140,255,.05));border-color:rgba(122,108,255,.3)">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <div style="width:60px;height:60px;border-radius:14px;background:var(--grad-brand);display:grid;place-items:center;font-size:28px">🚀</div>
+      <div style="flex:1">
+        <div style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1.2px">Your current plan</div>
+        <h3 style="margin:2px 0;font-size:20px">PRO · $29/month</h3>
+        <div style="color:var(--muted);font-size:13px">Next billing date: July 22, 2026 · Auto-renew on</div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm">Manage payment</button>
+        <button class="btn btn-gold btn-sm">⬆ Upgrade to Premium</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="billing">
+    <button class="active">Monthly</button>
+    <button>Yearly <span class="pill gold" style="font-size:10px;padding:0 6px;margin-left:4px">SAVE 20%</span></button>
+  </div>
+
+  <div class="grid grid-3">
+    <!-- FREE -->
+    <div class="tier">
+      <h3 data-i18n="free">Free</h3>
+      <div class="price">$0<small>/forever</small></div>
+      <p style="color:var(--muted);font-size:13.5px;margin:0">Perfect for trying out CORE Academy.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> 3 trial lessons</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Community chat access</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Basic progress tracking</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Public channel access</li>
+        <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="#ff9a9a" stroke-width="2.5" class="ic-sm"><path d="M6 6l12 12M18 6 6 18"/></svg> 1-on-1 mentorship</li>
+        <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="#ff9a9a" stroke-width="2.5" class="ic-sm"><path d="M6 6l12 12M18 6 6 18"/></svg> Lesson recordings</li>
+        <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="#ff9a9a" stroke-width="2.5" class="ic-sm"><path d="M6 6l12 12M18 6 6 18"/></svg> Voice & video calls</li>
+        <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="#ff9a9a" stroke-width="2.5" class="ic-sm"><path d="M6 6l12 12M18 6 6 18"/></svg> Certificate of completion</li>
+      </ul>
+      <button class="btn btn-ghost" style="justify-content:center" disabled>Current Plan ✓</button>
+    </div>
+
+    <!-- PRO -->
+    <div class="tier popular">
+      <div class="ribbon">POPULAR</div>
+      <h3 data-i18n="pro">Pro</h3>
+      <div class="price">$29<small>/month</small></div>
+      <p style="color:var(--muted);font-size:13.5px;margin:0">For serious learners — unlimited group classes.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Unlimited group lessons</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> All community features</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Voice & video calls</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Advanced analytics & XP</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Lesson recordings & notes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Custom stickers & themes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Priority email support</li>
+        <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="#ff9a9a" stroke-width="2.5" class="ic-sm"><path d="M6 6l12 12M18 6 6 18"/></svg> 1-on-1 private mentorship</li>
+      </ul>
+      <button class="btn btn-primary" style="justify-content:center" disabled>Your Plan ✓</button>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="tier">
+      <h3 data-i18n="premium">Premium</h3>
+      <div class="price">$79<small>/month</small></div>
+      <p style="color:var(--muted);font-size:13.5px;margin:0">Personal 1-on-1 mentor + everything in Pro.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> <b>Everything in Pro</b></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> 4× weekly 1-on-1 sessions</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Choose your dedicated mentor</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Custom learning roadmap</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Priority 24/7 support</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Certificate of completion</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Exclusive masterclasses</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#7ce5b1" stroke-width="2.5" class="ic-sm"><path d="m5 12 5 5L20 7"/></svg> Early access to new courses</li>
+      </ul>
+      <button class="btn btn-gold" style="justify-content:center">⬆ Upgrade to Premium</button>
+    </div>
+  </div>
+
+  <!-- FAQ + Payment -->
+  <div class="grid grid-2" style="margin-top:24px">
+    <div class="card card-pad">
+      <h3 style="margin:0 0 14px">Payment methods</h3>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;border:1px solid var(--border);background:var(--bg-1);margin-bottom:10px">
+        <div style="width:48px;height:32px;background:linear-gradient(135deg,#1A1F71,#0D47A1);border-radius:6px;color:#fff;font-weight:800;display:grid;place-items:center;font-size:10px">VISA</div>
+        <div style="flex:1"><div style="font-weight:600">•••• •••• •••• 4242</div><div style="color:var(--muted);font-size:12px">Expires 12/28 · Default</div></div>
+        <span class="pill green">Active</span>
+      </div>
+      <button class="btn btn-ghost" style="width:100%;justify-content:center">+ Add new payment method</button>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 14px">Billing history</h3>
+      <table>
+        <tbody>
+          <tr><td>Jun 22, 2026</td><td>Pro · Monthly</td><td style="text-align:right;font-weight:700">$29.00</td><td style="text-align:right"><a style="color:var(--blue);font-size:13px" href="#">PDF ↓</a></td></tr>
+          <tr><td>May 22, 2026</td><td>Pro · Monthly</td><td style="text-align:right;font-weight:700">$29.00</td><td style="text-align:right"><a style="color:var(--blue);font-size:13px" href="#">PDF ↓</a></td></tr>
+          <tr><td>Apr 22, 2026</td><td>Pro · Monthly</td><td style="text-align:right;font-weight:700">$29.00</td><td style="text-align:right"><a style="color:var(--blue);font-size:13px" href="#">PDF ↓</a></td></tr>
+          <tr><td>Mar 22, 2026</td><td>Free trial</td><td style="text-align:right;font-weight:700">$0.00</td><td style="text-align:right;color:var(--muted);font-size:12px">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>mountShell('subscription');</script>
+</body>
+</html>

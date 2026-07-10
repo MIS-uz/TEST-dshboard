@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Students · CORE Academy</title>
+<link rel="icon" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/theme.css"/>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="page-title">
+    <div>
+      <h1 data-i18n="students">Students</h1>
+      <p>1,284 active students across 6 languages.</p>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-ghost btn-sm">Export CSV</button>
+      <button class="btn btn-primary btn-sm">+ Invite Student</button>
+    </div>
+  </div>
+
+  <div class="grid grid-4" style="margin-bottom:18px">
+    <div class="stat"><div class="lbl">Total</div><div class="val">1,284</div><div class="delta">▲ 12.5%</div></div>
+    <div class="stat"><div class="lbl">Active this week</div><div class="val">982</div><div class="delta">▲ 8.3%</div></div>
+    <div class="stat"><div class="lbl">Pro subscribers</div><div class="val">418</div><div class="delta">▲ 22%</div></div>
+    <div class="stat"><div class="lbl">Premium subscribers</div><div class="val">96</div><div class="delta">▲ 31%</div></div>
+  </div>
+
+  <div class="card card-pad">
+    <div class="card-title">
+      <h3>All Students</h3>
+      <div style="display:flex;gap:8px">
+        <input placeholder="🔍 Search..." style="background:var(--bg-1);border:1px solid var(--border);border-radius:8px;padding:8px 12px;color:var(--text);font-size:13px;outline:0;width:240px"/>
+        <select style="background:var(--bg-1);border:1px solid var(--border);border-radius:8px;padding:8px;color:var(--text);font-size:13px">
+          <option>All courses</option><option>English</option><option>Korean</option><option>Russian</option><option>Uzbek</option>
+        </select>
+      </div>
+    </div>
+    <table>
+      <thead><tr><th>Student</th><th>Email</th><th>Course</th><th>Plan</th><th>Progress</th><th>Joined</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px">SP</div><div><div style="font-weight:600">Soo-jin Park</div><div style="color:var(--muted);font-size:11px">Seoul, KR</div></div></div></td><td>soojin@gmail.com</td><td>Korean A2</td><td><span class="pill gold">PREMIUM</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:95%"></div></div><span style="font-size:12px">95%</span></div></td><td style="color:var(--muted)">Jan 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px;background:var(--grad-gold);color:#1a120a">AK</div><div><div style="font-weight:600">Aziz Karimov</div><div style="color:var(--muted);font-size:11px">Tashkent, UZ</div></div></div></td><td>aziz@example.com</td><td>English B2</td><td><span class="pill">PRO</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:84%"></div></div><span style="font-size:12px">84%</span></div></td><td style="color:var(--muted)">Feb 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px">ML</div><div><div style="font-weight:600">Maria Lopez</div><div style="color:var(--muted);font-size:11px">Madrid, ES</div></div></div></td><td>maria@example.com</td><td>Russian B1</td><td><span class="pill">PRO</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:73%"></div></div><span style="font-size:12px">73%</span></div></td><td style="color:var(--muted)">Mar 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px">DV</div><div><div style="font-weight:600">Dilshod Vakhidov</div><div style="color:var(--muted);font-size:11px">Samarkand, UZ</div></div></div></td><td>dilshod@example.com</td><td>English A1</td><td><span class="pill green">FREE</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:64%"></div></div><span style="font-size:12px">64%</span></div></td><td style="color:var(--muted)">Apr 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px">JL</div><div><div style="font-weight:600">Jin-woo Lee</div><div style="color:var(--muted);font-size:11px">Busan, KR</div></div></div></td><td>jinwoo@example.com</td><td>Uzbek beginner</td><td><span class="pill">PRO</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:57%"></div></div><span style="font-size:12px">57%</span></div></td><td style="color:var(--muted)">Apr 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px">NV</div><div><div style="font-weight:600">Natalia Volkov</div><div style="color:var(--muted);font-size:11px">Moscow, RU</div></div></div></td><td>natalia@example.com</td><td>English C1</td><td><span class="pill gold">PREMIUM</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:88%"></div></div><span style="font-size:12px">88%</span></div></td><td style="color:var(--muted)">May 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px">JD</div><div><div style="font-weight:600">James Doe</div><div style="color:var(--muted);font-size:11px">London, UK</div></div></div></td><td>james@example.com</td><td>Korean A1</td><td><span class="pill green">FREE</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:42%"></div></div><span style="font-size:12px">42%</span></div></td><td style="color:var(--muted)">May 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+        <tr><td><div style="display:flex;align-items:center;gap:10px"><div class="avatar" style="width:32px;height:32px;font-size:12px">LW</div><div><div style="font-weight:600">Li Wei</div><div style="color:var(--muted);font-size:11px">Shanghai, CN</div></div></div></td><td>liwei@example.com</td><td>Russian A2</td><td><span class="pill">PRO</span></td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar-track" style="width:120px"><div class="bar-fill" style="width:51%"></div></div><span style="font-size:12px">51%</span></div></td><td style="color:var(--muted)">Jun 2026</td><td><button class="btn btn-ghost btn-sm">View</button></td></tr>
+      </tbody>
+    </table>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;color:var(--muted);font-size:13px">
+      <span>Showing 1-8 of 1,284</span>
+      <div style="display:flex;gap:6px"><button class="btn btn-ghost btn-sm">‹</button><button class="btn btn-primary btn-sm">1</button><button class="btn btn-ghost btn-sm">2</button><button class="btn btn-ghost btn-sm">3</button><button class="btn btn-ghost btn-sm">›</button></div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>mountShell('students');</script>
+</body>
+</html>

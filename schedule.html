@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Schedule · CORE Academy</title>
+<link rel="icon" href="../assets/logo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/theme.css"/>
+<style>
+  .cal{display:grid;grid-template-columns:80px repeat(7,1fr);background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+  .cal .h{padding:12px;text-align:center;background:var(--bg-2);border-bottom:1px solid var(--border);font-size:12.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1.2px}
+  .cal .h.today{color:var(--text);background:rgba(122,108,255,.15)}
+  .cal .h .d{font-size:18px;color:var(--text);display:block;margin-top:2px}
+  .cal .t{padding:14px 8px;text-align:right;font-size:11.5px;color:var(--muted-2);border-bottom:1px solid var(--border);border-right:1px solid var(--border)}
+  .cal .c{border-bottom:1px solid var(--border);border-right:1px solid var(--border);min-height:60px;position:relative;padding:4px}
+  .ev{background:var(--grad-brand);color:#fff;border-radius:6px;padding:5px 8px;font-size:11.5px;font-weight:600;margin-bottom:3px;cursor:pointer}
+  .ev.gold{background:var(--grad-gold);color:#1a120a}
+  .ev.green{background:linear-gradient(135deg,#2EC48A,#7CE5B1);color:#0a1a12}
+  .ev.red{background:linear-gradient(135deg,#FF5A5A,#FF99A0);color:#fff}
+  .ev .tt{display:block;font-size:10px;opacity:.9;font-weight:500}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="page-title">
+    <div>
+      <h1 data-i18n="schedule">Schedule</h1>
+      <p>This week · June 22 – 28, 2026</p>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button class="btn btn-ghost btn-sm">← Prev</button>
+      <button class="btn btn-ghost btn-sm">Today</button>
+      <button class="btn btn-ghost btn-sm">Next →</button>
+      <button class="btn btn-primary btn-sm">+ New Event</button>
+    </div>
+  </div>
+
+  <div class="cal">
+    <div class="h" style="background:var(--bg-3)">Time</div>
+    <div class="h">Mon <span class="d">22</span></div>
+    <div class="h today">Tue <span class="d">23</span></div>
+    <div class="h">Wed <span class="d">24</span></div>
+    <div class="h">Thu <span class="d">25</span></div>
+    <div class="h">Fri <span class="d">26</span></div>
+    <div class="h">Sat <span class="d">27</span></div>
+    <div class="h">Sun <span class="d">28</span></div>
+
+    <!-- 09:00 -->
+    <div class="t">09:00</div>
+    <div class="c"><div class="ev">Daily standup<span class="tt">15 min · Team</span></div></div>
+    <div class="c"><div class="ev">Daily standup<span class="tt">15 min · Team</span></div></div>
+    <div class="c"><div class="ev">Daily standup<span class="tt">15 min · Team</span></div></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">Daily standup<span class="tt">15 min · Team</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+
+    <!-- 10:00 -->
+    <div class="t">10:00</div>
+    <div class="c"><div class="ev green">Russian Beginner<span class="tt">90 min · 18 students</span></div></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">English A2 Group<span class="tt">90 min · 22 students</span></div></div>
+    <div class="c"><div class="ev green">Russian Beginner<span class="tt">90 min · 18 students</span></div></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">Japanese Hiragana<span class="tt">50 min · Free trial</span></div></div>
+    <div class="c"></div>
+
+    <!-- 11:00 -->
+    <div class="t">11:00</div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">German A2 Workshop<span class="tt">60 min · 16 students</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev gold">1-on-1: Soo Park<span class="tt">60 min · Premium</span></div></div>
+    <div class="c"><div class="ev">German A2 Workshop<span class="tt">60 min · 16 students</span></div></div>
+    <div class="c"></div>
+
+    <!-- 14:00 -->
+    <div class="t">14:00</div>
+    <div class="c"><div class="ev">English B2 Group<span class="tt">90 min · 24 students</span></div></div>
+    <div class="c"><div class="ev red">🔴 English B2 LIVE<span class="tt">90 min · 24 enrolled</span></div></div>
+    <div class="c"><div class="ev">English B2 Group<span class="tt">90 min · 24 students</span></div></div>
+    <div class="c"><div class="ev">English B2 Group<span class="tt">90 min · 24 students</span></div></div>
+    <div class="c"><div class="ev">English B2 Group<span class="tt">90 min · 24 students</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+
+    <!-- 16:00 -->
+    <div class="t">16:00</div>
+    <div class="c"><div class="ev gold">1-on-1: Aziz K.<span class="tt">60 min · Premium</span></div></div>
+    <div class="c"><div class="ev gold">1-on-1: Maria L.<span class="tt">60 min · Korean A1</span></div></div>
+    <div class="c"><div class="ev gold">1-on-1: Aziz K.<span class="tt">60 min · Premium</span></div></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev gold">1-on-1: Dilshod V.<span class="tt">60 min · Business EN</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+
+    <!-- 18:00 -->
+    <div class="t">18:00</div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev green">O'zbek Suhbat<span class="tt">45 min · Free trial</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">Mandarin Beginners<span class="tt">60 min · 8 students</span></div></div>
+    <div class="c"></div>
+
+    <!-- 19:00 -->
+    <div class="t">19:00</div>
+    <div class="c"><div class="ev">Spanish A1 Self-pace<span class="tt">Cohort sync</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">Spanish A1 Self-pace<span class="tt">Cohort sync</span></div></div>
+    <div class="c"><div class="ev">Japanese Hiragana<span class="tt">50 min · Free trial</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+
+    <!-- 20:00 -->
+    <div class="t">20:00</div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">Russian B1 Reading<span class="tt">60 min · 14 students</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"><div class="ev">Russian B1 Reading<span class="tt">60 min · 14 students</span></div></div>
+    <div class="c"></div>
+    <div class="c"></div>
+  </div>
+
+  <div class="grid grid-3" style="margin-top:18px">
+    <div class="card card-pad">
+      <h3 style="margin:0 0 10px;font-size:15px">Legend</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:14px;border-radius:4px;background:var(--grad-brand)"></span> Group lesson (Pro)</div>
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:14px;border-radius:4px;background:var(--grad-gold)"></span> 1-on-1 (Premium)</div>
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#2EC48A,#7CE5B1)"></span> Free trial</div>
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:14px;border-radius:4px;background:linear-gradient(135deg,#FF5A5A,#FF99A0)"></span> LIVE now</div>
+      </div>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 10px;font-size:15px">This week stats</h3>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">Group lessons</span><span>32</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">1-on-1 sessions</span><span>14</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border)"><span style="color:var(--muted)">Free trials</span><span>6</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0"><span style="color:var(--muted)">Total hours</span><span style="color:var(--gold);font-weight:700">52.5h</span></div>
+    </div>
+    <div class="card card-pad">
+      <h3 style="margin:0 0 10px;font-size:15px">Sync with</h3>
+      <button class="btn btn-ghost" style="width:100%;justify-content:flex-start;margin-bottom:8px">📅 Google Calendar</button>
+      <button class="btn btn-ghost" style="width:100%;justify-content:flex-start;margin-bottom:8px">📅 Outlook</button>
+      <button class="btn btn-ghost" style="width:100%;justify-content:flex-start">🍎 Apple Calendar</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/app.js"></script>
+<script>mountShell('schedule');</script>
+</body>
+</html>
